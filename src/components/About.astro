@@ -1,36 +1,53 @@
 ---
 import BadgeWork from "./ui/BadgeWork.astro";
-
-import GitHub from "./icons/GitHub.astro"
-import LinkedIn from './icons/LinkedIn.astro'
-import TikTok from './icons/TikTok.astro'
+import { mockSocials } from "../data/socials.mock";
 ---
 
-<section class="bg-secondary rounded-xl mt-4 p-8 flex flex-col sm:flex-row items-center gap-6">
-  <figure class="flex flex-shrink-0">
-    <img class="rounded-xl size-56" src="https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=" alt="Image of me">
+<section
+  class="bg-secondary rounded-xl mt-4 p-8 flex flex-col sm:flex-row items-center gap-6 animate-pulse-fade-in animate-duration-500"
+>
+  <figure class="flex flex-shrink-0 bg-tertiary rounded-xl">
+    <img
+      class="size-56 object-cover"
+      src=" face_memoji.png"
+      alt="Image of me"
+    />
   </figure>
 
   <div class="flex flex-col gap-4">
     <header class="flex items-center justify-between">
-      <BadgeWork/>      
-      
-      <div class="flex items-center gap-2">
-        <a  class="bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300"><GitHub/></a>
-        <a class="bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300"><LinkedIn/></a>
-        <a class="bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300"><TikTok/></a>
-      </div>
+      <BadgeWork />
 
+      <!-- socials link -->
+      <div class="flex items-center gap-2">
+        {
+          mockSocials?.map(({ href, icon: Icon }) => (
+            <a
+              href={href}
+              target="_blank"
+              class="bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300"
+            >
+              <Icon />
+            </a>
+          ))
+        }
+      </div>
     </header>
 
     <div class="space-y-1">
       <h1>Gaspar Castillo Catrifol</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum itaque ex laboriosam voluptates odio veniam dolorum consequatur hic fugiat ut atque, labore nihil aut sapiente quaerat iusto quos expedita placeat!</p>  
-    
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum itaque
+        ex laboriosam voluptates odio veniam dolorum consequatur hic fugiat ut
+        atque, labore nihil aut sapiente quaerat iusto quos expedita placeat!
+      </p>
     </div>
-    
+
     <footer class="flex">
-      <button class="ml-auto py-1 px-2 bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300">Contacto</button>
+      <a
+        class="ml-auto py-1 px-2 bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300"
+        >Contacto</a
+      >
     </footer>
   </div>
 </section>
