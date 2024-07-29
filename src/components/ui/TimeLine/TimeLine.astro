@@ -1,0 +1,27 @@
+---
+import TimeLineBody from "./TimeLineBody.astro";
+import TimeLineHeader from "./TimeLineHeader.astro";
+
+import type { TimeLine } from "./time-line.interface";
+
+interface Props {
+  data: TimeLine[];
+}
+
+const { data } = Astro.props;
+---
+
+<ol class="relative border-s border-neutral-400">
+  {
+    data?.map(({ company, date, role, projects }) => {
+      return (
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 borde border-gray-900 bg-amber-500" />
+
+          <TimeLineHeader company={company} date={date} role={role} />
+          <TimeLineBody projects={projects} />
+        </li>
+      );
+    })
+  }
+</ol>

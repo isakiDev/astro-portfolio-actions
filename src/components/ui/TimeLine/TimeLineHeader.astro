@@ -1,0 +1,35 @@
+---
+import type { TimeLine } from "./time-line.interface";
+
+interface Props {
+  company?: TimeLine["company"];
+  date?: TimeLine["date"];
+  role?: TimeLine["role"];
+}
+
+const { company, date, role } = Astro.props;
+---
+
+<header class="flex flex-col">
+  {role && <h3>{role}</h3>}
+
+  {
+    company && (
+      <a
+        href={company[1]}
+        target="_blank"
+        class="text-neutral-400 font-bold text-sm transition-colors hover:text-amber-400 duration-300"
+      >
+        {company[0]}
+      </a>
+    )
+  }
+
+  {
+    date && (
+      <time class="text-sm font-normal leading-none text-neutral-500">
+        {date}
+      </time>
+    )
+  }
+</header>
