@@ -1,26 +1,15 @@
-interface Task {
-  title?: string;
-  description?: string | string[];
-  url?: string;
-}
+import {type TimeLineData } from "../components/ui/TimeLine/time-line.interface";
 
-interface Job {
-  role?: string;
-  company?: [string, string]
-  date?: string;
-  projects?: Task[];
-}
-
-export const mockExperience: Job[] = [
+export const mockExperience: TimeLineData[] = [
   {
-    role: 'Desarrollador FullStack',
-    company: ['No Country', 'https://www.linkedin.com/company/nocountrytalent'],
+    title: 'Desarrollador FullStack',
+    subTitle: { title: 'No Country', url: 'https://www.linkedin.com/company/nocountrytalent'},
     date: 'may 2024 - actualidad',
-    projects: [
+    extraDetails: [
       {
         title: 'BarberHub',
         description: 'Aplicación web innovadora para automatizar la reserva de citas en barberías. En esta ocasión, mi rol fue el de backend developer, colaborando con un equipo de personas de diferentes países para dar vida a nuestra idea.',
-        url: 'http'
+        url: 'https://www.linkedin.com/feed/update/urn:li:activity:7200603436743016449/'
       },
       {
         title: 'EcoViaje',
@@ -30,10 +19,10 @@ export const mockExperience: Job[] = [
     ],
   },
   {
-    role: 'Desarrollador Web',
-    company: ['ColTec Spa', ''],
+    title: 'Desarrollador Web',
+    subTitle: { title: 'ColTec Spa', url: 'https://www.linkedin.com/company/coltec-spa/'},
     date: 'ene 2023 - jul 2023',
-    projects: [
+    extraDetails: [
       {
         description: [
           'Mantenimiento de módulos en PHP',
