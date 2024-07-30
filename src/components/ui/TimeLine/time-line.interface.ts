@@ -1,12 +1,12 @@
-export interface Task {
+export interface Detail {
   title?: string;
   description?: string | string[];
   url?: string;
 }
 
-export interface TimeLine {
-  role?: string;
-  company?: [string, string];
+export interface TimeLineData {
+  title?: string;
+  subTitle?: { title: string, url?: string }
   date?: string;
-  projects?: Task[];
+  extraDetails?: Detail[];
 }
