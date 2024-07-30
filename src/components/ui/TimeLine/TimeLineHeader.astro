@@ -1,26 +1,26 @@
 ---
-import type { TimeLine } from "./time-line.interface";
+import type { TimeLineData } from "./time-line.interface";
 
 interface Props {
-  company?: TimeLine["company"];
-  date?: TimeLine["date"];
-  role?: TimeLine["role"];
+  subTitle?: TimeLineData["subTitle"];
+  date?: TimeLineData["date"];
+  title?: TimeLineData["title"];
 }
 
-const { company, date, role } = Astro.props;
+const { subTitle, date, title } = Astro.props;
 ---
 
 <header class="flex flex-col">
-  {role && <h3>{role}</h3>}
+  {title && <h3>{title}</h3>}
 
   {
-    company && (
+    subTitle && (
       <a
-        href={company[1]}
+        href={subTitle.url}
         target="_blank"
         class="text-neutral-400 font-bold text-sm transition-colors hover:text-amber-400 duration-300"
       >
-        {company[0]}
+        {subTitle.title}
       </a>
     )
   }
