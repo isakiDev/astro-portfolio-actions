@@ -1,0 +1,67 @@
+---
+import Star from "./icons/Star.astro";
+
+import { mockProjects } from "../data/projects.mock";
+
+import GitHub from "./icons/GitHub.astro";
+import ExternalLink from "./icons/ExternalLink.astro";
+import BadgeSkill from "./ui/BadgeSkill.astro";
+---
+
+<section
+  class="bg-secondary rounded-2xl p-8 flex flex-col gap-6 animate-pulse-fade-in animate-duration-500 animate-delay-300"
+>
+  <div class="flex gap-4 items-center">
+    <Star />
+    <h2>Projects</h2>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-3">
+    {
+      mockProjects.map(
+        ({
+          description,
+          skills,
+          title,
+          urlDeploy,
+          urlImage,
+          date,
+          urlRepository,
+        }) => (
+          <article class="flex flex-col justify-between hover:bg-neutral-800/20 rounded-2xl p-4 hover:cursor-pointer">
+            <header>
+              <h3>{title}</h3>
+              <p>{description}</p>
+
+              <div class="flex flex-wrap gap-2 py-2">
+                {skills?.map((name) => (
+                  <BadgeSkill>{name}</BadgeSkill>
+                ))}
+              </div>
+            </header>
+
+            <footer class="flex flex-col">
+              <figure class="flex flex-shrink-0 bg-tertiary rounded-2xl overflow-hidden">
+                <img
+                  class="h-40 object-cover object-top"
+                  src={urlImage}
+                  alt=""
+                />
+              </figure>
+
+              <div class="flex items-center pt-4 gap-2">
+                <a class="flex items-center justify-center w-full bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300">
+                  <GitHub />
+                </a>
+
+                <a class="flex items-center justify-center w-full bg-tertiary hover:bg-white/10 p-2 rounded-xl text-white/80 hover:cursor-pointer hover:text-white transition-all duration-300">
+                  <ExternalLink />
+                </a>
+              </div>
+            </footer>
+          </article>
+        )
+      )
+    }
+  </div>
+</section>
