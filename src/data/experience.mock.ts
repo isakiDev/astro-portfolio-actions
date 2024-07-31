@@ -1,4 +1,4 @@
-import {type TimeLineData } from "../components/ui/TimeLine/time-line.interface";
+import {type TimeLineData } from "@ui/TimeLine/time-line.interface";
 
 export const mockExperience: TimeLineData[] = [
   {
@@ -11,11 +11,11 @@ export const mockExperience: TimeLineData[] = [
         description: 'Aplicación web innovadora para automatizar la reserva de citas en barberías. En esta ocasión, mi rol fue el de backend developer, colaborando con un equipo de personas de diferentes países para dar vida a nuestra idea.',
         url: 'https://www.linkedin.com/feed/update/urn:li:activity:7200603436743016449/'
       },
-      {
-        title: 'EcoViaje',
-        description: 'Aplicación web para el mercado de cartpooling',
-        url: 'http'
-      }
+      // {
+      //   title: 'EcoViaje',
+      //   description: 'Aplicación web para el mercado de cartpooling',
+      //   url: 'http'
+      // }
     ],
   },
   {
@@ -24,12 +24,7 @@ export const mockExperience: TimeLineData[] = [
     date: 'ene 2023 - jul 2023',
     extraDetails: [
       {
-        description: [
-          'Mantenimiento de módulos en PHP',
-          'Diseñar interfaces de usuario con Bootstrap',
-          'Integración de solicitudes HTTP con jQuery',
-          'Administración de base de datos MySQL'
-        ]
+        description: 'Participé en el desarrollo de una aplicación para la gestión de ventas y empleados, asumiendo un rol de fullstack. Mi trabajo abarcó el diseño de interfaces de usuario, la creación y administración de campos y tablas en la base de datos, y su integración, todo implementado con PHP.' 
       }
     ],
   }

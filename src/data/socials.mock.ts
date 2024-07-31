@@ -1,6 +1,6 @@
-import GitHub from "../components/icons/GitHub.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import TikTok from "../components/icons/TikTok.astro";
+import GitHub from "@icons/GitHub.astro";
+import LinkedIn from "@icons/LinkedIn.astro";
+import TikTok from "@icons/TikTok.astro";
 
 export const mockSocials = [
   {
