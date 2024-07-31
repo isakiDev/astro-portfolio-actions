@@ -1,0 +1,56 @@
+---
+import GitHub from "@icons/GitHub.astro";
+import CardBtnLink from "./CardButtonLink.astro";
+
+import { type Project } from "@data/projects.mock";
+import BadgeSkill from "@ui/BadgeSkill.astro";
+import ExternalLink from "@icons/ExternalLink.astro";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+
+const { description, skills, title, urlDeploy, urlImage, date, urlRepository } =
+  project;
+---
+
+<article
+  class="flex flex-col justify-between hover:bg-neutral-800/20 rounded-2xl p-4 hover:cursor-pointer"
+>
+  <header>
+    <h3>{title}</h3>
+    <p>{description}</p>
+
+    <div class="flex flex-wrap gap-2 py-2">
+      {skills?.map((name) => <BadgeSkill>{name}</BadgeSkill>)}
+    </div>
+  </header>
+
+  <footer class="flex flex-col gap-3">
+    <img
+      class="rounded-xl h-40 object-cover object-top"
+      src={urlImage}
+      alt=""
+    />
+
+    <div class="flex items-center gap-2">
+      {
+        urlRepository && (
+          <CardBtnLink href={urlRepository}>
+            <GitHub className="size-4 text-neutral-50" />
+          </CardBtnLink>
+        )
+      }
+
+      {
+        urlDeploy && (
+          <CardBtnLink href={urlDeploy}>
+            <ExternalLink className="size-4 text-neutral-50" />
+          </CardBtnLink>
+        )
+      }
+    </div>
+  </footer>
+</article>
