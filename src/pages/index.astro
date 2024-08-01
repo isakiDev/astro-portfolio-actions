@@ -11,9 +11,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Portfolio de Gaspar Castillo - Desarrollador Web">
-  <main
-    class="max-w-[900px] mx-auto min-h-screen my-8 px-4 flex flex-col gap-6"
-  >
+  <main class="p-4 mt-6 mx-auto flex flex-col gap-6 md:max-w-4xl">
     <About />
     <SpotifyIframeAlbum />
 
@@ -22,5 +20,7 @@ import Layout from "../layouts/Layout.astro";
     <Education />
   </main>
 
-  <Footer />
+  <footer class="p-4 pt-0 pb-12 mx-auto flex flex-col gap-6 md:max-w-4xl">
+    <Footer />
+  </footer>
 </Layout>
