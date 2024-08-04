@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 
 import GitHub from "@icons/GitHub.astro";
-import CardBtnLink from "./CardButtonLink.astro";
+import CardButtonLink from "./CardButtonLink.astro";
 
 import { type Project } from "@data/projects.mock";
 import BadgeSkill from "@ui/BadgeSkill.astro";
@@ -42,17 +42,17 @@ const { description, skills, title, urlDeploy, urlImage, urlRepository } =
     <div class="flex items-center gap-2">
       {
         urlRepository && (
-          <CardBtnLink aria-label="Ver Repositorio" href={urlRepository}>
+          <CardButtonLink aria-label="Ver Repositorio" href={urlRepository}>
             <GitHub className="size-4 text-neutral-50" />
-          </CardBtnLink>
+          </CardButtonLink>
         )
       }
 
       {
         urlDeploy && (
-          <CardBtnLink aria-label="Ver Deploy" href={urlDeploy}>
+          <CardButtonLink aria-label="Ver Deploy" href={urlDeploy}>
             <ExternalLink className="size-4 text-neutral-50" />
-          </CardBtnLink>
+          </CardButtonLink>
         )
       }
     </div>
