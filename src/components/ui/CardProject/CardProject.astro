@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 import GitHub from "@icons/GitHub.astro";
 import CardBtnLink from "./CardButtonLink.astro";
 
@@ -12,7 +14,7 @@ interface Props {
 
 const { project } = Astro.props;
 
-const { description, skills, title, urlDeploy, urlImage, date, urlRepository } =
+const { description, skills, title, urlDeploy, urlImage, urlRepository } =
   project;
 ---
 
@@ -29,7 +31,9 @@ const { description, skills, title, urlDeploy, urlImage, date, urlRepository } =
   </header>
 
   <footer class="flex flex-col gap-3">
-    <img
+    <Image
+      height={160}
+      width={400}
       class="rounded-xl h-40 object-cover object-top"
       src={urlImage}
       alt=""
@@ -38,7 +42,7 @@ const { description, skills, title, urlDeploy, urlImage, date, urlRepository } =
     <div class="flex items-center gap-2">
       {
         urlRepository && (
-          <CardBtnLink href={urlRepository}>
+          <CardBtnLink aria-label="Ver Repositorio" href={urlRepository}>
             <GitHub className="size-4 text-neutral-50" />
           </CardBtnLink>
         )
@@ -46,7 +50,7 @@ const { description, skills, title, urlDeploy, urlImage, date, urlRepository } =
 
       {
         urlDeploy && (
-          <CardBtnLink href={urlDeploy}>
+          <CardBtnLink aria-label="Ver Deploy" href={urlDeploy}>
             <ExternalLink className="size-4 text-neutral-50" />
           </CardBtnLink>
         )

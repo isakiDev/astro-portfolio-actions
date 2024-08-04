@@ -18,7 +18,7 @@ const { subTitle, date, title } = Astro.props;
       <a
         href={subTitle.url}
         target="_blank"
-        class="text-neutral-400 font-bold text-sm transition-colors hover:text-amber-400 w-fit duration-300"
+        class="text-neutral-400 font-bold text-base sm:text-sm  transition-colors hover:text-amber-400 w-fit duration-300"
       >
         {subTitle.title}
       </a>
@@ -27,7 +27,7 @@ const { subTitle, date, title } = Astro.props;
 
   {
     date && (
-      <time class="text-sm font-normal leading-none text-neutral-500">
+      <time class="text-base sm:text-sm font-normal leading-none text-neutral-500">
         {date}
       </time>
     )
