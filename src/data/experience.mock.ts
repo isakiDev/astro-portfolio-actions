@@ -19,12 +19,12 @@ export const mockExperience: TimeLineData[] = [
     ],
   },
   {
-    title: 'Desarrollador Web',
+    title: 'Desarrollador FullStack',
     subTitle: { title: 'ColTec Spa', url: 'https://www.linkedin.com/company/coltec-spa/'},
     date: 'ene 2023 - jul 2023',
     extraDetails: [
       {
-        description: 'Participé en el desarrollo de una aplicación para la gestión de ventas y empleados, asumiendo un rol de fullstack. Mi trabajo abarcó el diseño de interfaces de usuario, la creación y administración de campos y tablas en la base de datos, y su integración, todo implementado con PHP.' 
+        description: 'Participé en el desarrollo de una aplicación de gestión para salas de venta, restaurantes y sistemas de autoatención. Mi trabajo incluyó la creación de nuevos módulos desarrollados con PHP para la aplicación, como la gestión de impresoras, vacaciones y permisos de empleados. También desarrollé interfaces de usuario utilizando Bootstrap y gestioné la creación de nuevas tablas en la base de datos.'
       }
     ],
   }
