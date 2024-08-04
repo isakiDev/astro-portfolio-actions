@@ -4,16 +4,45 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const metadata = {
+  description:
+    "Portfolio de Gaspar Castillo, desarrollador web con experiencia en front-end y back-end",
+  url: "https://isakidev.netlify.app/",
+  author: "Gaspar Castillo Catrifol",
+  keywords:
+    "portfolio, ingeniero de software, node.js, react, nextjs, nestjs, tailwindcss, docker, chile, san fernando",
+  image:
+    "https://res.cloudinary.com/dzn3nempv/image/upload/v1722736430/portfolio/cciuovkhaskqxovo50z1.png",
+};
+
+const { description, author, url, keywords, image } = metadata;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
+    <meta name="keywords" content={keywords} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png+xml" href="/face_memoji.png" />
+    <link rel="icon" type="image/png+xml" href={image} />
     <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
   </head>
   <body>
