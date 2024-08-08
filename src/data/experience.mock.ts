@@ -7,15 +7,15 @@ export const mockExperience: TimeLineData[] = [
     date: 'may 2024 - actualidad',
     extraDetails: [
       {
-        title: 'BarberHub',
-        description: 'Aplicación web innovadora para automatizar la reserva de citas en barberías. En esta ocasión, mi rol fue el de backend developer, colaborando con un equipo de personas de diferentes países para dar vida a nuestra idea.',
-        url: 'https://www.linkedin.com/feed/update/urn:li:activity:7200603436743016449/'
+        title: 'EcoViaje',
+        description: 'Desarrollé APIs e interfaces de usuario para una aplicación web de carpooling. Colaboré estrechamente con el equipo de backend en la creación de bases de datos y en la implementación de endpoints para la consulta de viajes. Además, diseñé y desarrollé las distintas pantallas de la aplicación utilizando React y TailwindCSS, garantizando una experiencia de usuario fluida y visualmente atractiva.'
       },
-      // {
-      //   title: 'EcoViaje',
-      //   description: 'Aplicación web para el mercado de cartpooling',
-      //   url: 'http'
-      // }
+      {
+        title: 'BarberHub',
+        description: 'Como desarrollador backend, me encargué del diseño, prueba y documentación de la API para una aplicación web innovadora destinada a automatizar la reserva de citas en barberías. Colaboré con un equipo internacional para concretar nuestra visión, enfocándome en crear una solución robusta, eficiente y bien documentada.',
+        url: 'https://www.linkedin.com/feed/update/urn:li:activity:7200603436743016449/'
+      }
+      
     ],
   },
   {
