@@ -4,6 +4,9 @@ import { Image } from "astro:assets";
 import BadgeWork from "@ui/BadgeWork.astro";
 import SocialButtonLinks from "@ui/SocialButtonLinks.astro";
 import ButtonLink from "@ui/ButtonLink.astro";
+
+import MailForward from "@icons/MailForward.astro";
+import FileExport from "@icons/FileExport.astro";
 ---
 
 <section
@@ -38,13 +41,21 @@ import ButtonLink from "@ui/ButtonLink.astro";
       </p>
     </div>
 
-    <footer class="flex ml-auto">
+    <footer class="flex ml-auto gap-2">
       <ButtonLink
         href="mailto:gaspar.c.developer@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
-        role="link">Contáctame</ButtonLink
+        role="link"
       >
+        <MailForward className="mr-1" />
+        Contacto
+      </ButtonLink>
+
+      <ButtonLink href="gaspar_castillo_cv.pdf" role="link">
+        <FileExport className="mr-1" />
+        Resumen
+      </ButtonLink>
     </footer>
   </div>
 </section>
