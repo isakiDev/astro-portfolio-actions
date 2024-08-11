@@ -9,6 +9,34 @@ import MailForward from "@icons/MailForward.astro";
 import FileExport from "@icons/FileExport.astro";
 ---
 
+<script>
+  import { copyTextToClipboard } from "../../utils/copy-text-to-clipboard.util.ts";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(
+      "#btn-copy-text"
+    ) as HTMLButtonElement;
+
+    const toast = document.getElementById("toast") as HTMLDivElement;
+
+    button?.addEventListener("click", () => {
+      button.disabled = true;
+
+      copyTextToClipboard("gaspar.c.developer@gmail.com");
+      showToast();
+    });
+
+    function showToast() {
+      toast?.classList.toggle("show");
+
+      setTimeout(() => {
+        toast?.classList.toggle("show");
+        button.disabled = false;
+      }, 1500);
+    }
+  });
+</script>
+
 <section
   class="bg-secondary rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 animate-pulse-fade-in animate-duration-500"
 >
@@ -42,15 +70,13 @@ import FileExport from "@icons/FileExport.astro";
     </div>
 
     <footer class="flex ml-auto gap-2">
-      <ButtonLink
-        href="mailto:gaspar.c.developer@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        role="link"
+      <button
+        class="inline-flex items-center text-sm justify-center rounded-xl bg-neutral-800 p-2 text-neutral-50 opacity-80 transition-opacity duration-150 hover:opacity-100 group hover:cursor-pointer font-semibold gap-1"
+        id="btn-copy-text"
       >
-        <MailForward className="mr-1" />
+        <MailForward />
         Contacto
-      </ButtonLink>
+      </button>
 
       <ButtonLink href="gaspar_castillo_cv.pdf" role="link">
         <FileExport className="mr-1" />

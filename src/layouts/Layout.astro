@@ -100,6 +100,19 @@ const { description, author, url, keywords, image } = metadata;
     animation-delay: 0.5s;
   }
 
+  .toast {
+    opacity: 0;
+    transition:
+      opacity 0.4s ease-in-out,
+      transform 0.4s ease-in-out;
+    transform: translateY(-100px);
+  }
+
+  .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @keyframes pulse-fade-in {
     0% {
       transform: scale(0.9);
