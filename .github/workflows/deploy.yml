@@ -1,10 +1,11 @@
 name: Deploy Netlify
 
-on: 
-  push: 
-    paths:
-      - "./dist/**"
-      - ".github/workflows/deploy.yml"
+# on: 
+#   push: 
+#     paths:
+#       - "./dist/**"
+#       - ".github/workflows/deploy.yml"
+on: [push]
 
 jobs:
     build-and-deploy:
