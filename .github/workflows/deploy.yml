@@ -1,0 +1,38 @@
+name: Deploy Netlify
+
+on: 
+  push: 
+    paths:
+      - "./dist/**"
+      - ".github/workflows/deploy.yml"
+  
+
+jobs:
+    build-and-deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Repository checkout
+          uses: actions/checkout@v4
+        
+        - name: Setup nodejs
+          uses: actions/setup-node@v4
+          with: 
+            node-version: 20
+            cache: "npm"
+
+        - name: Install netlify
+          run: npm install netlify-cli@17.10.1 -g
+
+        - name: Install dependencies
+          run: npm ci
+
+        - name: Generate build
+          run: npm run build
+
+        - name: Deploy to Netlify
+          id: netlify_deploy
+          run: |
+            netlify deploy \
+              --dir list \
+              --site ${{secrets.NETLIFY_SITE_ID}}
+              --auth ${{secrets.NETLIFY_API_TOKEN}}
