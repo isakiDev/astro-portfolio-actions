@@ -5,7 +5,6 @@ on:
     paths:
       - "./dist/**"
       - ".github/workflows/deploy.yml"
-  
 
 jobs:
     build-and-deploy:
@@ -33,6 +32,6 @@ jobs:
           id: netlify_deploy
           run: |
             netlify deploy \
-              --dir list \
+              --dir dist \
               --site ${{secrets.NETLIFY_SITE_ID}}
               --auth ${{secrets.NETLIFY_API_TOKEN}}
