@@ -14,9 +14,11 @@ const metadata = {
     "portfolio, ingeniero de software, Node.js, React, Next.js, NestJS, Tailwind CSS, Docker, TypeScript, JavaScript, Chile, San Fernando",
   image:
     "https://res.cloudinary.com/dzn3nempv/image/upload/c_crop,g_auto,h_800,w_800/portfolio/barjgvkwgi5m6lxf9qyq.jpg",
+  icon: 
+    "https://res.cloudinary.com/dzn3nempv/image/upload/v1722736430/portfolio/cciuovkhaskqxovo50z1.png"
 };
 
-const { description, author, url, keywords, image } = metadata;
+const { description, author, url, keywords, image, icon } = metadata;
 ---
 
 <!doctype html>
@@ -40,7 +42,7 @@ const { description, author, url, keywords, image } = metadata;
     <meta name="twitter:image" content={image} />
 
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png+xml" href={image} />
+    <link rel="icon" type="image/png+xml" href={icon} />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
