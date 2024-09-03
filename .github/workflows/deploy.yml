@@ -10,22 +10,22 @@ jobs:
     build-and-deploy:
       runs-on: ubuntu-latest
       steps:
-        - name: Repository checkout
+        - name: Repository Checkout
           uses: actions/checkout@v4
         
-        - name: Setup nodejs
+        - name: Setup Nodejs
           uses: actions/setup-node@v4
           with: 
             node-version: 20
             cache: "npm"
 
-        - name: Install netlify
+        - name: Install Netlify Cli
           run: npm install netlify-cli@17.10.1 -g
 
-        - name: Install dependencies
+        - name: Install Dependencies
           run: npm ci
 
-        - name: Generate build
+        - name: Generate Build
           run: npm run build
 
         - name: Deploy to Netlify
