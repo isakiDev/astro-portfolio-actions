@@ -1,12 +1,12 @@
 name: Deploy Netlify
 
-# on: 
-#   push: 
-#     paths:
-#       - "./dist/**"
-#       - ".github/workflows/deploy.yml"
-
-on: [push]
+on: 
+  push: 
+    branches: 
+      - main
+    paths:
+      - "./dist/**"
+      - ".github/workflows/deploy.yml"
 
 env:
   BRANCH_NAME: ${{github.ref_name}}
