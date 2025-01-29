@@ -3,7 +3,7 @@ import {type TimeLineData } from "@ui/TimeLine/time-line.interface";
 export const mockExperience: TimeLineData[] = [
   {
     title: 'Data Governance Trainee',
-    subTitle: { title: 'Zurich Santander Chile', url: 'https://www.zurichsantander.cl/' },
+    subTitle: { title: 'Zurich Santander Chile', url: 'https://linkedin.com/company/zurich-santander-insurance-america' },
     date: 'sep 2024 - actualidad',
     extraDetails: [
       {
