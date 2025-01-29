@@ -2,20 +2,26 @@ import {type TimeLineData } from "@ui/TimeLine/time-line.interface";
 
 export const mockExperience: TimeLineData[] = [
   {
-    title: 'Desarrollador FullStack',
-    subTitle: { title: 'No Country', url: 'https://www.linkedin.com/company/nocountrytalent'},
-    date: 'may 2024 - actualidad',
+    title: 'Data Governance Trainee',
+    subTitle: { title: 'Zurich Santander Chile', url: 'https://www.zurichsantander.cl/' },
+    date: 'sep 2024 - actualidad',
     extraDetails: [
       {
-        title: 'EcoViaje',
-        description: 'Desarrollé APIs e interfaces de usuario para una aplicación web de carpooling. Colaboré estrechamente con el equipo de backend en la creación de bases de datos y en la implementación de endpoints para la consulta de viajes. Además, diseñé y desarrollé las distintas pantallas de la aplicación utilizando React y TailwindCSS, garantizando una experiencia de usuario fluida y visualmente atractiva.'
-      },
+        title: 'Calidad de Datos',
+        description: 'Aprendizaje en el ámbito de los datos dentro de una empresa de seguros. Actualmente, me encargo de garantizar la calidad de los datos utilizando herramientas como OMMA y Databricks.'
+      }
+    ]
+  },
+  {
+    title: 'Desarrollador FullStack',
+    subTitle: { title: 'No Country', url: 'https://www.linkedin.com/company/nocountrytalent'},
+    date: 'may 2024 - dic 2024',
+    extraDetails: [
       {
         title: 'BarberHub',
         description: 'Como desarrollador backend, me encargué del diseño, prueba y documentación de la API para una aplicación web innovadora destinada a automatizar la reserva de citas en barberías. Colaboré con un equipo internacional para concretar nuestra visión, enfocándome en crear una solución robusta, eficiente y bien documentada.',
         url: 'https://www.linkedin.com/feed/update/urn:li:activity:7200603436743016449/'
       }
-      
     ],
   },
   {
