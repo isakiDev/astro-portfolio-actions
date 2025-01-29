@@ -1,5 +1,7 @@
 ---
 import SocialButtonLinks from "@ui/SocialButtonLinks.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <section
@@ -9,7 +11,7 @@ import SocialButtonLinks from "@ui/SocialButtonLinks.astro";
     class="flex w-full items-center justify-between text-neutral-200 text-sm font-semibold"
   >
     <div>
-      2024
+      {currentYear}
       <span class="opacity-50">-</span>
       Gaspar Castillo 👨‍💻
     </div>
