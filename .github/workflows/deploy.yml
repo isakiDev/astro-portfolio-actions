@@ -5,7 +5,7 @@ on:
     branches: 
       - main
     paths:
-      - "./dist/**"
+      - "./src/**"
       - ".github/workflows/deploy.yml"
 
 env:
