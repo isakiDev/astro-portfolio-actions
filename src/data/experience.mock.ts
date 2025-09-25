@@ -23,7 +23,7 @@ export const mockExperience: TimeLineData[] = [
       title: "No Country",
       url: "https://www.linkedin.com/company/nocountrytalent",
     },
-    date: "may 2024 - dic 2024",
+    date: "may 2024 - mar 2025",
     extraDetails: [
       {
         title: "BarberHub",
@@ -43,7 +43,7 @@ export const mockExperience: TimeLineData[] = [
     extraDetails: [
       {
         description:
-          "Participé en el desarrollo de una aplicación de gestión para salas de venta, restaurantes y sistemas de autoatención. Mi trabajo incluyó la creación de nuevos módulos desarrollados con PHP para la aplicación, como la gestión de impresoras, vacaciones y permisos de empleados. También desarrollé interfaces de usuario utilizando Bootstrap y gestioné la creación de nuevas tablas en la base de datos.",
+          "Participé en el desarrollo de una aplicación de gestión para salas de venta, restaurantes y sistemas de autoatención. Mi trabajo incluyó la creación de nuevos módulos desarrollados con PHP para la aplicación, como la gestión de impresoras, vacaciones y permisos de empleados. "
       },
     ],
   },
