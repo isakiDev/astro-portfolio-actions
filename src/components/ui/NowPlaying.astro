@@ -1,6 +1,7 @@
 ---
 import type { PlayingResponse } from "src/interfaces/now-playing.interface";
 
+// test url
 const res = await fetch("https://isakidev.netlify.app/api/now-playing");
 
 const { albumImageUrl, title, artist, isPlaying }: PlayingResponse =
