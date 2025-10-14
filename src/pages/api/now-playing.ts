@@ -11,9 +11,6 @@ export const GET: APIRoute = async () => {
     const clientSecret = import.meta.env.SECRET_CLIENT_SECRET;
     const refreshToken = import.meta.env.SECRET_REFRESH_TOKEN;
 
-    console.log({ msg: 'hello' })
-
-
     const basic = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
 
     const body = new URLSearchParams({
