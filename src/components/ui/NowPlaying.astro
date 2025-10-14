@@ -1,11 +1,13 @@
 ---
 import type { PlayingResponse } from "src/interfaces/now-playing.interface";
+import { getNowPlaying } from "../../utils/now-playing.util";
 
-// test url
-const res = await fetch("https://isakidev.netlify.app/api/now-playing");
-
-const { albumImageUrl, title, artist, isPlaying }: PlayingResponse =
-  await res.json();
+const { isPlaying, albumImageUrl, title, artist }: PlayingResponse =
+  await getNowPlaying({
+    clientId: import.meta.env.PUBLIC_CLIENT_ID,
+    clientSecret: import.meta.env.SECRET_CLIENT_SECRET,
+    refreshToken: import.meta.env.SECRET_REFRESH_TOKEN,
+  });
 
 const isPlayingText = isPlaying ? "playing" : "offline";
 
