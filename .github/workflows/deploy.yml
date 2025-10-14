@@ -40,13 +40,13 @@ jobs:
         - name: Generate Build
           run: pnpm run build
 
-        - name: Deploy to Netlify
+        - name: Deploy to Netlify (SSR)
           id: netlify_deploy
           run: |
             prod_flag=""
             if [ "$BRANCH_NAME" = "main" ]; then prod_flag="--prod"; fi
             netlify deploy \
-              --dir dist \
+              --build \
               --site ${{secrets.NETLIFY_SITE_ID}} \
               --auth ${{secrets.NETLIFY_API_TOKEN}} \
               $prod_flag
