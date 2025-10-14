@@ -1,18 +1,8 @@
 ---
 import { getNowPlaying } from "../../utils/spotify";
+import type { PlayingResponse } from "../../interfaces/spotify.interface";
 
-interface SpotifyPlayingResponse {
-  albumImageUrl: string;
-  artist: string;
-  isPlaying: boolean;
-  songUrl: string;
-  title: string;
-  timePlayed: number;
-  timeTotal: number;
-  artistUrl: string;
-}
-
-const data: SpotifyPlayingResponse = await getNowPlaying({
+const data: PlayingResponse = await getNowPlaying({
   clientId: import.meta.env.VITE_CLIENT_ID,
   clientSecret: import.meta.env.VITE_CLIENT_SECRET,
   refreshToken: import.meta.env.VITE_REFRESH_TOKEN,
