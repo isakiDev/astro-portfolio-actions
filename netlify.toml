@@ -1,7 +1,0 @@
-[build]
-  command = "pnpm run build"
-  publish = ".netlify/output/public"
-
-[functions]
-  directory = ".netlify/output/functions"
-  node_bundler = "esbuild"
