@@ -52,6 +52,8 @@ export const getNowPlaying = async ({ clientId, clientSecret, refreshToken }: In
 
     const song = await response.json();
     const albumImageUrl = song.item.album.images[0].url;
+    // todo: refactor adding types
+    // @ts-ignore
     const artist = song.item.artists.map((artist) => artist.name).join(', ');
     const isPlaying = song.is_playing;
     const songUrl = song.item.external_urls.spotify;
@@ -72,7 +74,7 @@ export const getNowPlaying = async ({ clientId, clientSecret, refreshToken }: In
     };
   } catch (error) {
     console.error('Error fetching currently playing song: ', error);
-    return error.message.toString();
+    return 'Unexpected error'
   }
 };
 
