@@ -33,7 +33,7 @@ jobs:
         - name: Install Netlify Cli
           run: pnpm add netlify-cli@17.10.1 -g
 
-          # npm ci
+          # npm ci with pnpm
         - name: Install Dependencies
           run: pnpm install --frozen-lockfile
 
