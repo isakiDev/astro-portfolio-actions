@@ -1,5 +1,5 @@
 ---
-import { getNowPlaying } from "../../utils/spotify";
+import { getNowPlaying } from "../../utils/now-playing.util";
 import type { PlayingResponse } from "../../interfaces/spotify.interface";
 
 const data: PlayingResponse = await getNowPlaying({
@@ -29,7 +29,7 @@ const finalData = computedData[isPlayingText];
 ---
 
 <article
-  class="border border-green-500/10 bg-secondary rounded-2xl w-fit py-2 px-3 flex items-center gap-4"
+  class="border border-green-500/10 bg-secondary rounded-2xl w-fit py-2 px-3 flex items-center gap-4 animate-pulse-fade-in animate-duration-500"
 >
   <img
     class="border border-white/10 rounded-lg opacity-80"
